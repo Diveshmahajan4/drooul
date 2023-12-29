@@ -4,6 +4,7 @@ import { buttonVariants } from '@/components/ui/button'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { ArrowDownToLine, CheckCircle, Leaf } from 'lucide-react'
+import ProductReel from '@/components/ProductReel'
 
 const perks = [
   {
@@ -42,6 +43,8 @@ export default function Home() {
           <Button variant='outline'>Quality promise &rarr;</Button>
         </div>
       </div>
+
+      <ProductReel query={{ sort: 'desc', limit: 4}} href='/products' title="Brand New"/>
     </MaxWidthWrapper>
 
     <section className='border-t border-gray-200 bg-gray-50'>
