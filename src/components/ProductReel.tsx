@@ -49,7 +49,7 @@ const ProductReel = (props: ProductReelProps) => {
                         </h1>
                     ) : null}
                     {subtitle ? (
-                        <p className="text-2xl font-bold text-gray-900 sm:text-3xl">
+                        <p className="mt-2 text-sm text-muted-foreground">
                             {subtitle}
                         </p>
                     ) : null}
@@ -64,7 +64,7 @@ const ProductReel = (props: ProductReelProps) => {
                 <div className="mt-6 flex items-center">
                     <div className="w-full grid grid-cols-4 gap-x-4 gap-y-10 sm:gap-x-6 md:gird-cols-4 md:gap-y-10 lg:gap-x-8">
                         {list.map((product, i) => (
-                            <ProductListing product={product} index={i}/>
+                            <ProductListing key={`product-${i}`} product={product} index={i}/>
                         ))}
                     </div>
                 </div>
