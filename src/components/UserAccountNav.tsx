@@ -8,7 +8,7 @@ import Link from "next/link"
 import { useAuth } from "@/hooks/use-auth"
 
 
-const UserAccountNav = async ({ user }: { user: User }) => {
+const UserAccountNav = ({ user }: { user: User }) => {
 
     const { signOut } = useAuth()
 
