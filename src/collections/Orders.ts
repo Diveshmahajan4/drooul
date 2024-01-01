@@ -14,7 +14,7 @@ export const Orders: CollectionConfig = {
     slug: 'orders',
     admin: {
         useAsTitle: 'Your Orders',
-        description: 'A summary of all orders as GessoUI',
+        description: 'A summary of all orders as drooul',
     },
     access: {
         read: yourOwn,

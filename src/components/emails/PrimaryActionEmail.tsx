@@ -37,12 +37,12 @@ import {
               src={`${process.env.NEXT_PUBLIC_SERVER_URL}/hippo-newsletter-sign-up.png`}
               width='150'
               height='150'
-              alt='GessoUI'
+              alt='drooul'
               style={logo}
             />
             <Text style={paragraph}>Hi there,</Text>
             <Text style={paragraph}>
-              Welcome to GessoUI, the marketplace for
+              Welcome to drooul, the marketplace for
               high quality digital goods. Use the button below
               to {actionLabel}.
             </Text>
@@ -54,7 +54,7 @@ import {
             <Text style={paragraph}>
               Best,
               <br />
-              The GessoUI team
+              The drooul team
             </Text>
             <Hr style={hr} />
             <Text style={footer}>

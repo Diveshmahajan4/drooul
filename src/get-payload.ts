@@ -45,7 +45,7 @@ export const getPayloadClient = async ({ initOptions }: Args ={}): Promise<Paylo
             email: {
                 transport: transporter,
                 fromAddress: 'onboarding@resend.dev',
-                fromName: 'GessoUI',
+                fromName: 'drooul',
             },
             secret: process.env.PAYLOAD_SECRET,
             local: initOptions?.express ? false : true,

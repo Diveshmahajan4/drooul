@@ -14,22 +14,23 @@ const Navbar = async () => {
     const {user} = await getServerSideUser(nextCookies);
 
   return (
-    <div className="bg-white sticky z-50 top-0 inset-x-0 h-16 ">
+    <div className="bg-opacity-0 sticky z-50 top-0 inset-x-0 h-16 ">
         <header className="relative bg-white border-b border-gray-200">
             <MaxWidthWrapper>
-                <div className="border-b border-gray-200">
+                <div >
                     <div className="flex h-16 items-center">
                         {/* Mobile Navigation */}
                         <MobileNav/>
                         <div className="ml-4 flex lg:ml-0">
                             <Link href='/'>
-                                <Image src='/logoblue.png' alt="Logo" height={190} width={190}/>
+                                <Image src='/logoblue1.png' alt="Logo" height={120} width={120}/>
                             </Link>
-                        M</div>
-
-                        <div className="hidden z-50 lg:ml-0 lg:block lg:self-stretch">
-                            <NavItems/>
                         </div>
+
+                        {/* Additional items in navbar like UI Kits and Icon */}
+                        {/* <div className="hidden z-50 lg:ml-0 lg:block lg:self-stretch">
+                            <NavItems/>
+                        </div> */}
 
                         <div className="ml-auto flex items-center">
                             <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6 ">

@@ -40,7 +40,7 @@ export const ReceiptEmail = ({
   return (
     <Html>
       <Head />
-      <Preview>Your GessoUI Receipt</Preview>
+      <Preview>Your drooul Receipt</Preview>
 
       <Body style={main}>
         <Container style={container}>
