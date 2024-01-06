@@ -17,7 +17,7 @@ This repository contains the sources of Drooul's website:
 - It uses [Resend](https://resend.com/) to send emails.
 - It uses [MongoDB](https://mongodb.com/) as a database.
 - It also has payment funtionality using [Stripe](https://stripe.com/en-in)
-- It's build and deployed with [Netlify](https://www.netlify.com/).
+- It's build and deployed with [Railway](https://railway.app/).
 
 ## Requirements
 
