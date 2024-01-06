@@ -1,6 +1,4 @@
-<div style="text-align:center;">
-  <img src="./public/logoblue1.png" alt="Image" style="height:40px; width:auto; border-radius:5px;">
-</div>
+[![Drooul Banner and Logo](./public/readme.png)](https://drooul.up.railway.app)
 
 # Drooul
 

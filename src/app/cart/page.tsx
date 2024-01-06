@@ -5,7 +5,7 @@ import { PRODUCT_CATEGORIES } from '@/config'
 import { useCart } from '@/hooks/use-cart'
 import { cn, formatPrice } from '@/lib/utils'
 import { trpc } from '@/trpc/client'
-import { Check, Loader2, X } from 'lucide-react'
+import { Check, CheckCircle, Loader2, X } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
@@ -38,9 +38,9 @@ const Page = () => {
   const fee = 1
 
   return (
-    <div className='bg-white'>
+    <div className=''>
       <div className='mx-auto max-w-2xl px-4 pb-24 pt-16 sm:px-6 lg:max-w-7xl lg:px-8'>
-        <h1 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
+        <h1 className='text-3xl font-bold tracking-tight text-muted sm:text-4xl'>
           Shopping Cart
         </h1>
 
@@ -93,7 +93,7 @@ const Page = () => {
                       key={product.id}
                       className='flex py-6 sm:py-10'>
                       <div className='flex-shrink-0'>
-                        <div className='relative h-24 w-24'>
+                        <div className='relative h-32 w-32'>
                           {typeof image !== 'string' &&
                           image.url ? (
                             <Image
@@ -110,10 +110,10 @@ const Page = () => {
                         <div className='relative pr-9 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:pr-0'>
                           <div>
                             <div className='flex justify-between'>
-                              <h3 className='text-sm'>
+                              <h3 className='text-md'>
                                 <Link
                                   href={`/product/${product.id}`}
-                                  className='font-medium text-gray-700 hover:text-gray-800'>
+                                  className='font-semibold  text-muted hover:text-muted-foreground'>
                                   {product.name}
                                 </Link>
                               </h3>
@@ -125,8 +125,16 @@ const Page = () => {
                               </p>
                             </div>
 
-                            <p className='mt-1 text-sm font-medium text-gray-900'>
+                            <p className='mt-1 font-semibold text-lg text-muted'>
                               {formatPrice(product.price)}
+                            </p>
+
+                            <p className='mt-2 flex space-x-2 text-md text-muted'>
+                              <CheckCircle className='h-5 w-5 flex-shrink-0 text-green-500' />
+
+                              <span>
+                                Verified Product
+                              </span>
                             </p>
                           </div>
 
@@ -147,13 +155,7 @@ const Page = () => {
                           </div>
                         </div>
 
-                        <p className='mt-4 flex space-x-2 text-sm text-gray-700'>
-                          <Check className='h-5 w-5 flex-shrink-0 text-green-500' />
-
-                          <span>
-                            Eligible for instant delivery
-                          </span>
-                        </p>
+              
                       </div>
                     </li>
                   )
@@ -161,17 +163,17 @@ const Page = () => {
             </ul>
           </div>
 
-          <section className='mt-16 rounded-lg bg-gray-50 px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8'>
+          <section className='mt-16 rounded-lg bg-gray-100 px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8'>
             <h2 className='text-lg font-medium text-gray-900'>
               Order summary
             </h2>
 
             <div className='mt-6 space-y-4'>
               <div className='flex items-center justify-between'>
-                <p className='text-sm text-gray-600'>
+                <p className='text-md font-semibold text-gray-600'>
                   Subtotal
                 </p>
-                <p className='text-sm font-medium text-gray-900'>
+                <p className='text-md text-gray-900'>
                   {isMounted ? (
                     formatPrice(cartTotal)
                   ) : (
@@ -181,7 +183,7 @@ const Page = () => {
               </div>
 
               <div className='flex items-center justify-between border-t border-gray-200 pt-4'>
-                <div className='flex items-center text-sm text-muted-foreground'>
+                <div className='flex items-center text-md font-semibold text-muted-foreground'>
                   <span>Flat Transaction Fee</span>
                 </div>
                 <div className='text-sm font-medium text-gray-900'>

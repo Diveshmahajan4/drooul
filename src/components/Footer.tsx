@@ -15,7 +15,7 @@ const Footer = () => {
   ]
 
   return (
-    <footer className='bg-white flex-grow-0'>
+    <footer className='flex-grow-0'>
       <MaxWidthWrapper>
         <div className='border-t border-gray-200'>
           {pathsToMinimize.includes(pathname) ? null : (
@@ -32,12 +32,12 @@ const Footer = () => {
                 <div className='absolute inset-0 overflow-hidden rounded-lg'>
                   <div
                     aria-hidden='true'
-                    className='absolute bg-zinc-50 inset-0 bg-gradient-to-br bg-opacity-90'
+                    className='absolut inset-0 bg-gradient-to-br bg-opacity-90'
                   />
                 </div>
 
                 <div className='text-center relative mx-auto max-w-sm'>
-                  <h3 className='font-semibold text-gray-900'>
+                  <h3 className='font-semibold text-gray-900 text-muted'>
                     Become a seller
                   </h3>
                   <p className='mt-2 text-sm text-muted-foreground'>
@@ -46,7 +46,7 @@ const Footer = () => {
                     minutes.{' '}
                     <Link
                       href='/sign-in?as=seller'
-                      className='whitespace-nowrap font-medium text-black hover:text-zinc-900'>
+                      className='whitespace-nowrap font-medium text-blue-500 hover:text-zinc-900'>
                       Get started &rarr;
                     </Link>
                   </p>
@@ -61,6 +61,12 @@ const Footer = () => {
             <p className='text-sm text-muted-foreground'>
               &copy; {new Date().getFullYear()} All Rights
               Reserved
+            </p>
+          </div>
+
+          <div className='text-center md:text-left'>
+            <p className='text-sm text-muted pl-24'>
+              Made with <span>💖</span> by Divesh Mahajan
             </p>
           </div>
 

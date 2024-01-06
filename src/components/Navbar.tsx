@@ -8,14 +8,15 @@ import { getServerSideUser } from "@/lib/payload-utils"
 import { cookies } from 'next/headers'
 import UserAccountNav from "./UserAccountNav"
 import MobileNav from "./MobileNav"
+import { ModeToggle } from "./ToggleMode"
 
 const Navbar = async () => {
     const nextCookies = cookies()
     const {user} = await getServerSideUser(nextCookies);
 
   return (
-    <div className="bg-opacity-0 sticky z-50 top-0 inset-x-0 h-16 ">
-        <header className="relative bg-white border-b border-gray-200">
+    <div className="bg-opacity-100  sticky z-50 top-0 inset-x-0 h-16 ">
+        <header className="relative  border-b">
             <MaxWidthWrapper>
                 <div >
                     <div className="flex h-16 items-center">
@@ -55,6 +56,9 @@ const Navbar = async () => {
                                 )}
                                 <div className="ml-4 flow-root lg:ml-6">
                                     <Cart/>
+                                </div>
+                                <div className="ml-4 flow-root lg:ml-6">
+                                    <ModeToggle/>
                                 </div>
                             </div>
                         </div>

@@ -47,8 +47,8 @@ const Page = async ({params}: PageProps) => {
     const validUrls = product?.images.map(({image}) => typeof image === 'string' ? image: image.url).filter(Boolean) as string[]
 
   return (
-    <MaxWidthWrapper className="bg-white">
-        <div className="bg-white">
+    <MaxWidthWrapper className="">
+        <div className="">
             <div className="flex mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                 {/* Product Details */}
                 <div className="lg:max-w-lg lg:self-end">
@@ -77,12 +77,12 @@ const Page = async ({params}: PageProps) => {
                     </ol>
 
                     <div className="mt-4">
-                        <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{product.name}</h1>
+                        <h1 className="text-3xl font-bold tracking-tight text-muted sm:text-4xl">{product.name}</h1>
                     </div>
 
                     <section className="mt-4">
                         <div className="flex items-center">
-                            <p className="font-medium text-gray-900">{formatPrice(product.price)}</p>
+                            <p className="font-medium text-muted">{formatPrice(product.price)}</p>
 
                             <div className="ml-4 border-l text-muted-foreground border-gray-300 pl-4">
                                     {label}
@@ -95,7 +95,7 @@ const Page = async ({params}: PageProps) => {
 
                         <div className="mt-6 flex items-center">
                             <Check className="h-5 w-5 flex-shrink-0 text-green-500"/>
-                            <p className="ml-2 text-sm text-muted-foreground">Eligible for instant delivery</p>
+                            <p className="ml-2 text-sm text-muted-foreground">Verified Product</p>
                         </div>
                     </section>
                 </div>

@@ -42,13 +42,19 @@ const ProductListing = ({product, index}: ProductListingProps) => {
         <div className="flex flex-col w-full">
           {/* Image slider */}
           <ImageSlider urls={validUrls}/>
-          <h3 className="mt-4 font-medium text-sm text-gray-700">
-            {product.name}
-          </h3>
-          <p className="mt-1 text-sm text-gray-500">
-            {label}
-          </p>
-          <p className="mt-1 font-medium text-sm text-gray-900">{formatPrice(product.price)}</p>
+          <div className="flex justify-between px-3">
+            <div>
+              <h3 className="mt-4 font-medium text-lg text-muted">
+                {product.name}
+              </h3>
+              <p className=" text-sm  font-semibold text-gray-500">
+                {label}
+              </p>
+            </div>
+            <p className="mt-4 text-lg font-bold text-muted">{formatPrice(product.price)}</p>
+          </div>
+          
+          
         </div>
         
       </Link>
